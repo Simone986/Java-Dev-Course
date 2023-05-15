@@ -100,7 +100,7 @@ public class Labirinto {
                             playerPositionX = labirinto.length-1;
                         }
                         if(labirinto[playerPositionX][playerPositionY] == 'W'){
-                            playerPositionY--;
+                            playerPositionX--;
                             printLabyrinth(labirinto);
                             System.out.println("Ti sei fracassato contro il muro");
                             break;
