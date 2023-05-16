@@ -25,14 +25,11 @@ public class Labirinto {
         
         int[][] path = createPath(labirinto, playerPositionX, playerPositionY); //Crea un percorso sicuro
 
-        labirinto[playerPositionX][playerPositionY] = 'P';
-        labirinto[exitPositionX][exitPositionY] = 'E';
-
         //Genera muri casuali
         for(int i = 0; i < labirinto.length*labirinto.length; i++){ 
             int wallX = (int) (Math.random()*labirinto.length);
             int wallY = (int) (Math.random()*labirinto.length);
-            if(path[wallX][wallY] != 1){
+            if(path[wallX][wallY] != 1 && labirinto[wallX][wallY] != 'P'){
                 int r = (int)(Math.random()*2);//50% che spawni un muro
                 labirinto[wallX][wallY] = 'W';
             }
