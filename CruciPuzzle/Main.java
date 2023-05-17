@@ -9,7 +9,7 @@ public class Main{
                              {'m', 'n', 'o', 'p'}
                             };   
         
-        String parola = "okgc";
+        String parola = "pkfa";
 
         CruciPuzzle.puzzle(matrice, parola);
 

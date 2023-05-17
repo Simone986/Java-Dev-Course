@@ -26,7 +26,25 @@ public class CruciPuzzle {
                             printMatrice(matrice);
                             System.out.println("La parola " + parola + " e' presente verticalmente");
                             return true;
-                        }                 
+                        }
+                        //Controlla se la parola è presente in diagonale
+                        for(int x = i; x < matrice.length; x++){                           
+                                confronto += matrice[x][x];                           
+                        }
+                        if(confronto.contains(parola)){
+                            printMatrice(matrice);
+                            System.out.println("La parola " + parola + " e' presente diagonalmente");
+                            return true;
+                        }
+                        // Controlla se la parola è presente in diagonale al contrario
+                        for (int x = matrice.length-1; x >= 0; x--) {
+                            confronto += matrice[x][x];
+                        }
+                        if (confronto.contains(parola)) {
+                            printMatrice(matrice);
+                            System.out.println("La parola " + parola + " e' presente diagonalmente al contrario");
+                            return true;
+                        }
                     }
                     if(matrice[i][j] == parola.charAt(parola.length()-1)){ 
                         //Controlla se la parola è presente al contrario
